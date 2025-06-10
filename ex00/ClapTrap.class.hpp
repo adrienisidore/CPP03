@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/09 13:43:13 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 17:42:18 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ClapTrap
 	
 	public:
 		ClapTrap(void);//Constructeur par defaut
+		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &copy);//Constructeur par copie
 		ClapTrap	&operator=(const ClapTrap &rhs);
 		~ClapTrap(void);//Destructeur par defaut

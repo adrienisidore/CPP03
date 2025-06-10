@@ -6,7 +6,7 @@
 #    By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 14:09:31 by aisidore          #+#    #+#              #
-#    Updated: 2025/06/09 13:38:54 by aisidore         ###   ########.fr        #
+#    Updated: 2025/06/10 17:44:00 by aisidore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME = claptrap
 
 FLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
-SRC = src/main.cpp src/ClapTrap.cpp
+SRC = src/main.cpp src/ClapTrap.class.cpp
 
-OBJ = objets/main.o objets/ClapTrap.o
+OBJ = objets/main.o objets/ClapTrap.class.o
 
 all: $(NAME)
 
