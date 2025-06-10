@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.class.hpp                                 :+:      :+:    :+:   */
+/*   FragTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:16:08 by aisidore         ###   ########.fr       */
+/*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
+/*   Updated: 2025/06/10 19:59:17 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//S'assurer que j'ai pas oublie de fct pour la forme canonique
+#ifndef FRAGTRAP_CLASS_HPP
+# define FRAGTRAP_CLASS_HPP
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+# include "ClapTrap.class.hpp"
 
-# include <iostream>
 
-class ClapTrap 
+class FragTrap : public ClapTrap
 {
-	protected:
-		std::string	_name;
-		int			_hitpoint;
-		int			_energypoint;
-		int			_attackdamage;
-	
 	public:
-		ClapTrap(void);//Constructeur par defaut
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &copy);//Constructeur par copie
-		ClapTrap	&operator=(const ClapTrap &rhs);
-		~ClapTrap(void);//Destructeur par defaut
-		
-		std::string getname(void);
+		FragTrap();//Constructeur par defaut
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &copy);//Constructeur par copie
+		FragTrap	&operator=(const FragTrap &rhs);
+		~FragTrap(void);//Destructeur par defaut
 		
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void highFivesGuys(void);
 };
 
 #endif

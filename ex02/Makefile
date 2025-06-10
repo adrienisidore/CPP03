@@ -6,17 +6,17 @@
 #    By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 14:09:31 by aisidore          #+#    #+#              #
-#    Updated: 2025/06/10 17:44:43 by aisidore         ###   ########.fr        #
+#    Updated: 2025/06/10 17:44:59 by aisidore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = scavtrap
+NAME = fragtrap
 
 FLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
-SRC = src/main.cpp src/ClapTrap.class.cpp src/ScavTrap.class.cpp
+SRC = src/main.cpp src/ClapTrap.class.cpp src/FragTrap.class.cpp
 
-OBJ = objets/main.o objets/ClapTrap.class.o objets/ScavTrap.class.o
+OBJ = objets/main.o objets/ClapTrap.class.o objets/FragTrap.class.o
 
 all: $(NAME)
 

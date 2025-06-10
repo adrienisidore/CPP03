@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 16:02:03 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:54:48 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap(void);//Constructeur par defaut
+		ScavTrap();//Constructeur par defaut
+		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &copy);//Constructeur par copie
 		ScavTrap	&operator=(const ScavTrap &rhs);
 		~ScavTrap(void);//Destructeur par defaut
