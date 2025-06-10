@@ -6,13 +6,14 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:05:41 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:27:37 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.class.hpp"
 
 //Quand on cre ScavTrap ca fait d'abord appel au constructeur parent
+//Peut on initialiser les valeurs de ScavTrap dans la liste d'initialisation ? Se renseigner sur internet
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	std::cout << "ScavTrap default constructor called" << std::endl;

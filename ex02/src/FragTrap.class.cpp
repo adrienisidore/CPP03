@@ -6,13 +6,14 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:23:00 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:27:51 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.class.hpp"
 
 //Quand on cre FragTrap ca fait d'abord appel au constructeur parent
+//Peut on initialiser les valeurs de FragTrap dans la liste d'initialisation ? Se renseigner sur internet
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "FragTrap default constructor called" << std::endl;

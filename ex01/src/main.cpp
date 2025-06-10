@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:21:09 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:25:21 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,9 @@ int	main(void)
 	ScavTrap	ScavGus("ScavGus");
 	
 	ScavGus.guardGate();
+	ScavGus.attack("Franck");
+	ScavGus.beRepaired(2);
+	ScavGus.takeDamage(3);
+	ScavGus.attack("Franck");
 	return (0);
 }
