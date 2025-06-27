@@ -6,24 +6,26 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:25:21 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:26:37 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
+//CHANGER TOUS LES HEADER POUR RETIRER .class.
+//-Wshadow et -Wno-shadow à mettre dans le Makefile pour tester
 int	main(void)
 {
 	ClapTrap	Gugus("Gugus");
 	ScavTrap	ScavGus("ScavGus");
-	ScavTrap	ScavGus2;
-	
-	ScavGus.guardGate();
-	ScavGus.attack("Franck");
-	ScavGus.beRepaired(2);
-	ScavGus.takeDamage(3);
-	Gugus.attack("Franck");
-	//Destruction des couches spécifiques, puis de la base commune
-	//ScavTrap puis ClapTrap
+	FragTrap	FragGus("FragGus");
+	DiamondTrap	DiamondGus("DiamondGus");
+
+	DiamondGus.guardGate();
+	DiamondGus.highFivesGuys();
+	DiamondGus.attack("Franck");
+	DiamondGus.beRepaired(2);
+	DiamondGus.takeDamage(3);
+	DiamondGus.whoAmI();
 	return (0);
 }

@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:25:21 by aisidore         ###   ########.fr       */
+/*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
+/*   Updated: 2025/06/10 19:54:48 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int	main(void)
+# include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ClapTrap	Gugus("Gugus");
-	ScavTrap	ScavGus("ScavGus");
-	ScavTrap	ScavGus2;
-	
-	ScavGus.guardGate();
-	ScavGus.attack("Franck");
-	ScavGus.beRepaired(2);
-	ScavGus.takeDamage(3);
-	Gugus.attack("Franck");
-	//Destruction des couches spécifiques, puis de la base commune
-	//ScavTrap puis ClapTrap
-	return (0);
-}
+	public:
+		ScavTrap();
+		ScavTrap(const std::string name);
+		ScavTrap(const ScavTrap &copy);
+		ScavTrap	&operator=(const ScavTrap &rhs);
+		~ScavTrap(void);
+		void attack(const std::string& target);
+		void guardGate(void) const;
+};
+
+#endif

@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.class.hpp                                 :+:      :+:    :+:   */
+/*   ClapTrap.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 19:59:17 by aisidore         ###   ########.fr       */
+/*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
+/*   Updated: 2025/06/10 20:16:12 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CLASS_HPP
-# define FRAGTRAP_CLASS_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-# include "ClapTrap.class.hpp"
+# include <iostream>
 
-class FragTrap : public ClapTrap
+class ClapTrap 
 {
+	protected:
+		std::string	_name;
+		int			_hitpoint;
+		int			_energypoint;
+		int			_attackdamage;
 	public:
-		FragTrap();//Constructeur par defaut
-		FragTrap(std::string name);
-		FragTrap(const FragTrap &copy);//Constructeur par copie
-		FragTrap	&operator=(const FragTrap &rhs);
-		~FragTrap(void);//Destructeur par defaut
+		ClapTrap(void);
+		ClapTrap(const std::string name);
+		ClapTrap(const ClapTrap &copy);
+		ClapTrap	&operator=(const ClapTrap &rhs);
+		~ClapTrap(void);
+		std::string getname(void) const;
 		void attack(const std::string& target);
-		void highFivesGuys(void);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
 
 #endif

@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.class.hpp"
+#include "FragTrap.hpp"
 
-//Quand on cre FragTrap ca fait d'abord appel au constructeur parent
-//Peut on initialiser les valeurs de FragTrap dans la liste d'initialisation ? Se renseigner sur internet
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
@@ -21,21 +19,34 @@ FragTrap::FragTrap(void) : ClapTrap()
 
 FragTrap::FragTrap(std::string	name) : ClapTrap(name)
 {
-	std::cout << " FragTrap constructor called for " << _name << std::endl;
-	_hitpoint = 100;
-	_energypoint = 50;
-	_attackdamage = 20;
+	std::cout << "FragTrap constructor called for " << this->_name << std::endl;
+	this->_hitpoint = 100;
+	this->_energypoint = 50;
+	this->_attackdamage = 20;
 }
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
-	//CHANGER POUR this
-	std::cout << "FragTrap copy constructor called for hitpoint = " << copy._hitpoint << " energypoint = "<< copy._energypoint << " attackdamage = "<< copy._attackdamage << std::endl; 
+	std::cout << "FragTrap copy constructor called for hitpoint = "
+	<< this->_hitpoint << " energypoint = "<< this->_energypoint << " attackdamage = "
+	<< this->_attackdamage << std::endl; 
 }
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FragTrap default destructor called for " << _name << std::endl;
+	std::cout << "FragTrap default destructor called for " << this->_name << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &rhs)
+{
+	if (this != &rhs)
+	{
+		std::cout << "FragTrap assignment operator called" << std::endl;
+		ClapTrap::operator=(rhs);
+	}
+	else
+		std::cout << "Assignment operator called for the same instance" << std::endl;
+	return (*this);
 }
 
 void FragTrap::attack(const std::string& target)

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.class.hpp"
+#include "ScavTrap.hpp"
 
 //Appel au constructeur parent
 ScavTrap::ScavTrap(void) : ClapTrap()
@@ -33,9 +33,9 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 //Copie des éléments "ClapTrap" d'un ScavTrap à l'autre
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
-	//CHANGER POUR this
-	std::cout << "ScavTrap copy constructor called for hitpoint = " << copy._hitpoint
-	<< " energypoint = "<< copy._energypoint << " attackdamage = "<< copy._attackdamage << std::endl; 
+	std::cout << "ScavTrap copy constructor called for hitpoint = "
+	<< this->_hitpoint << " energypoint = "<< this->_energypoint << " attackdamage = "
+	<< this->_attackdamage << std::endl; 
 }
 
 ScavTrap::~ScavTrap(void)

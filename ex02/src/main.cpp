@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.class.hpp"
+#include "FragTrap.hpp"
 
+//CHANGER TOUS LES HEADER POUR RETIRER .class.
 int	main(void)
 {
 	ClapTrap	Gugus("Gugus");

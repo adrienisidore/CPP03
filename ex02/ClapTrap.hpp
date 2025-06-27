@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//S'assurer que j'ai pas oublie de fct pour la forme canonique
-
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
@@ -24,16 +22,13 @@ class ClapTrap
 		int			_hitpoint;
 		int			_energypoint;
 		int			_attackdamage;
-	
 	public:
-		ClapTrap(void);//Constructeur par defaut
+		ClapTrap(void);
 		ClapTrap(const std::string name);
-		ClapTrap(const ClapTrap &copy);//Constructeur par copie
+		ClapTrap(const ClapTrap &copy);
 		ClapTrap	&operator=(const ClapTrap &rhs);
-		~ClapTrap(void);//Destructeur par defaut
-		
+		~ClapTrap(void);
 		std::string getname(void) const;
-		
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);

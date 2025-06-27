@@ -14,9 +14,9 @@ NAME = claptrap
 
 FLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
-SRC = src/main.cpp src/ClapTrap.class.cpp
+SRC = src/main.cpp src/ClapTrap.cpp
 
-OBJ = objets/main.o objets/ClapTrap.class.o
+OBJ = objets/main.o objets/ClapTrap.o
 
 all: $(NAME)
 

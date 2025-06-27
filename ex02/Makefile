@@ -14,9 +14,9 @@ NAME = fragtrap
 
 FLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
-SRC = src/main.cpp src/ClapTrap.class.cpp src/FragTrap.class.cpp
+SRC = src/main.cpp src/ClapTrap.cpp src/FragTrap.cpp
 
-OBJ = objets/main.o objets/ClapTrap.class.o objets/FragTrap.class.o
+OBJ = objets/main.o objets/ClapTrap.o objets/FragTrap.o
 
 all: $(NAME)
 

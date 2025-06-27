@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//S'assurer que j'ai pas oublie de fct pour la forme canonique
-
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
