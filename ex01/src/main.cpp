@@ -16,12 +16,13 @@ int	main(void)
 {
 	ClapTrap	Gugus("Gugus");
 	ScavTrap	ScavGus("ScavGus");
+	ScavTrap	ScavGus2;
 	
 	ScavGus.guardGate();
 	ScavGus.attack("Franck");
 	ScavGus.beRepaired(2);
 	ScavGus.takeDamage(3);
-	ScavGus.attack("Franck");
+	Gugus.attack("Franck");
 	//Destruction des couches spécifiques, puis de la base commune
 	//ScavTrap puis ClapTrap
 	return (0);

@@ -27,11 +27,9 @@ FragTrap::FragTrap(std::string	name) : ClapTrap(name)
 	_attackdamage = 20;
 }
 
-//Quand jutilise le constructeur par copie, je prends en parametre un constructeur de copie ClapTrap avec copy en parametre.
-//copy (rhs) est la partie herite par FragTrap et est donc de type ClapTrap
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
-	
+	//CHANGER POUR this
 	std::cout << "FragTrap copy constructor called for hitpoint = " << copy._hitpoint << " energypoint = "<< copy._energypoint << " attackdamage = "<< copy._attackdamage << std::endl; 
 }
 
@@ -44,36 +42,12 @@ void FragTrap::attack(const std::string& target)
 {
 	if (this->_energypoint && this->_hitpoint)
 	{
-		std::cout << "FragTrap " << this->_name << " attacks " << target << ", causing " << this->_attackdamage << " points of damage!" << std::endl;
+		std::cout << "FragTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_attackdamage << " points of damage!" << std::endl;
 		(this->_energypoint)--;
 		return ;
 	}
 	std::cout << this->_name << " has no energy/hit point to attack" << std::endl;
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-	if (this->_energypoint && this->_hitpoint)
-	{
-		std::cout << "FragTrap " << this->_name << " lost " << amount << " points of damage!" << std::endl;
-		this->_hitpoint -= amount;
-		if (this->_hitpoint <= 0)
-			std::cout << "FragTrap " << this->_name << " died" << std::endl;
-		return ;
-	}
-	std::cout << this->_name << " has no more energy/hit point to take damage" << std::endl;
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-	if (this->_energypoint && this->_hitpoint)
-	{
-		std::cout << "FragTrap " << this->_name << " gained " << amount << " points!" << std::endl;
-		(this->_energypoint)--;
-		this->_hitpoint += amount;
-		return ;
-	}
-	std::cout << this->_name << " has no more energy/hit point to be repaired" << std::endl;
 }
 
 void FragTrap::highFivesGuys(void)

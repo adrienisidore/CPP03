@@ -15,7 +15,6 @@
 
 # include "ClapTrap.class.hpp"
 
-
 class FragTrap : public ClapTrap
 {
 	public:
@@ -24,10 +23,7 @@ class FragTrap : public ClapTrap
 		FragTrap(const FragTrap &copy);//Constructeur par copie
 		FragTrap	&operator=(const FragTrap &rhs);
 		~FragTrap(void);//Destructeur par defaut
-		
 		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 		void highFivesGuys(void);
 };
 

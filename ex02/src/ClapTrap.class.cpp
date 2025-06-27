@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(void) : _name("Default"), _hitpoint(10), _energypoint(10), _attackdamage(10)
 {
-	std::cout << "ClapTrap default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called for " << this->_name << std::endl;
 }
 
 ClapTrap::ClapTrap(const std::string name) : _name(name), _hitpoint(10), _energypoint(10), _attackdamage(10)
