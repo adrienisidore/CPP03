@@ -27,12 +27,12 @@ class ClapTrap
 	
 	public:
 		ClapTrap(void);//Constructeur par defaut
-		ClapTrap(std::string name);
+		ClapTrap(const std::string name);
 		ClapTrap(const ClapTrap &copy);//Constructeur par copie
 		ClapTrap	&operator=(const ClapTrap &rhs);
 		~ClapTrap(void);//Destructeur par defaut
 		
-		std::string getname(void);
+		std::string getname(void) const;
 		
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);

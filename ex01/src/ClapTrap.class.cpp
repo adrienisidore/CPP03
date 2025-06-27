@@ -17,14 +17,15 @@ ClapTrap::ClapTrap(void) : _name("Default"), _hitpoint(10), _energypoint(10), _a
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string	name) : _name(name), _hitpoint(10), _energypoint(10), _attackdamage(10)
+ClapTrap::ClapTrap(const std::string name) : _name(name), _hitpoint(10), _energypoint(10), _attackdamage(10)
 {
-	std::cout << "ClapTrap constructor called for " << this->_name << std::endl;
+	std::cout << "ClapTrap copy constructor called for " << this->_name << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy) : _name(copy._name), _hitpoint(copy._hitpoint), _energypoint(copy._energypoint), _attackdamage(copy._attackdamage)
 {
-	std::cout << "ClapTrap copy constructor called, with hitpoint = " << copy._hitpoint << " energypoint = "<< copy._energypoint << " attackdamage = "<< copy._attackdamage << std::endl; 
+	std::cout << "ClapTrap copy constructor called, with hitpoint = " << this->_hitpoint
+	<< " energypoint = "<< this->_energypoint << " attackdamage = "<< this->_attackdamage << std::endl;  
 }
 
 ClapTrap::~ClapTrap(void)
@@ -36,8 +37,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &rhs)
 {
 	if (this != &rhs)
 	{
-		std::cout << "Assignment operator called" << std::endl;
-		//Correct ? String peut se transmettre sans compromettre les futurs valeurs de rhs._name ?
+		std::cout << "ClapTrap assignment operator called" << std::endl;
 		this->_name = rhs._name;
 		this->_hitpoint = rhs._hitpoint;
 		this->_energypoint = rhs._energypoint;
@@ -48,12 +48,11 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &rhs)
 	return (*this);
 }
 
-std::string ClapTrap::getname(void)
+std::string ClapTrap::getname(void) const
 {
 	return (this->_name);
 }
 
-// Of course, ClapTrap can’t do anything if it has no hit points or energy points left.
 void ClapTrap::attack(const std::string& target)
 {
 	if (this->_energypoint && this->_hitpoint)
@@ -69,10 +68,10 @@ void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_energypoint && this->_hitpoint)
 	{
-		std::cout << "ClapTrap " << this->_name << " lost " << amount << " points of damage!" << std::endl;
+		std::cout << this->_name << " lost " << amount << " points of damage!" << std::endl;
 		this->_hitpoint -= amount;
 		if (this->_hitpoint <= 0)
-			std::cout << "ClapTrap " << this->_name << " died" << std::endl;
+			std::cout << this->_name << " died" << std::endl;
 		return ;
 	}
 	std::cout << this->_name << " has no more energy/hit point to take damage" << std::endl;
@@ -82,7 +81,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_energypoint && this->_hitpoint)
 	{
-		std::cout << "ClapTrap " << this->_name << " gained " << amount << " points!" << std::endl;
+		std::cout << this->_name << " gained " << amount << " points!" << std::endl;
 		(this->_energypoint)--;
 		this->_hitpoint += amount;
 		return ;

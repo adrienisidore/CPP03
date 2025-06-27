@@ -15,17 +15,14 @@
 int	main(void)
 {
 	ClapTrap	Gugus("Gugus");
-	ClapTrap	default_;//ClapTrap	default_ = Gugus;
-	ClapTrap	copy = Gugus;//Utilise le constructeur par copie alors que je fais pas ClapTrap copy(Gugus)
-	//Il faut eviter de declarer et initialiser une valeur en meme temps pour eviter les comportements imprevisibles.
-	ClapTrap	copy2(Gugus);
+	ClapTrap	default_;
+	ClapTrap	copy = Gugus;//Constructeur par copie
+	ClapTrap	copy2(Gugus);//Idem
 
-	std::cout << "copy is called " << copy.getname() << std::endl;//faire un getter pour copy
-	std::cout << "copy2 is called " << copy2.getname() << std::endl;//faire un getter pour copy
-	
-	default_ = Gugus;//le nom par defaut est "Default", Default_ recupere les valeurs de Gugus;
-	std::cout << "default_ is called " << default_.getname() << std::endl;//faire un getter pour copy
-
+	std::cout << "copy is called " << copy.getname() << std::endl;
+	std::cout << "copy2 is called " << copy2.getname() << std::endl;
+	default_ = Gugus;
+	std::cout << "default_ is called " << default_.getname() << std::endl;
 	Gugus.attack("Franck");
 	Gugus.beRepaired(2);
 	Gugus.takeDamage(3);

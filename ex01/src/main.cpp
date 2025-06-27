@@ -22,5 +22,7 @@ int	main(void)
 	ScavGus.beRepaired(2);
 	ScavGus.takeDamage(3);
 	ScavGus.attack("Franck");
+	//Destruction des couches spécifiques, puis de la base commune
+	//ScavTrap puis ClapTrap
 	return (0);
 }

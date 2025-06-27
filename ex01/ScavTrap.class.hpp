@@ -15,20 +15,16 @@
 
 # include "ClapTrap.class.hpp"
 
-
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap();//Constructeur par defaut
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap &copy);//Constructeur par copie
+		ScavTrap();
+		ScavTrap(const std::string name);
+		ScavTrap(const ScavTrap &copy);
 		ScavTrap	&operator=(const ScavTrap &rhs);
-		~ScavTrap(void);//Destructeur par defaut
-		
+		~ScavTrap(void);
 		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		void guardGate(void);
+		void guardGate(void) const;
 };
 
 #endif
