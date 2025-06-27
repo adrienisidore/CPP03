@@ -13,7 +13,7 @@
 #include "DiamondTrap.hpp"
 
 //CHANGER TOUS LES HEADER POUR RETIRER .class.
-//-Wshadow et -Wno-shadow à mettre dans le Makefile pour tester
+//-Wshadow : Vérifie que _name de DiamondTrap ne cache pas son _name ClapTrap
 int	main(void)
 {
 	ClapTrap	Gugus("Gugus");
