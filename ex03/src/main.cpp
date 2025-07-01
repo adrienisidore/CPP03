@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:26:37 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 11:35:45 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(void)
 	DiamondGus.attack("Franck");
 	DiamondGus.beRepaired(2);
 	DiamondGus.takeDamage(3);
+	//tester l'operareut =
+	
 	DiamondGus.whoAmI();
 	return (0);
 }
