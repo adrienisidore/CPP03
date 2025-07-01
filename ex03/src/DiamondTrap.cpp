@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:49:19 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 17:43:07 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 19:12:22 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)
 		std::cout << "DiamondTrap assignment operator called" << std::endl;
 		ClapTrap::operator=(rhs);
         this->_name = rhs._name;
-		this->_hitpoint = rhs._hitpoint;
-		this->_energypoint = rhs._energypoint;
-		this->_attackdamage = rhs._attackdamage;
 	}
 	else
 		std::cout << "Assignment operator called for the same instance" << std::endl;

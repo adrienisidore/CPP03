@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.class.cpp                                 :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:32:52 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:15:40 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 19:09:42 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (this->_energypoint && this->_hitpoint)
 	{
-		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackdamage << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << this->_name << " attacks " << target
+		<< ", causing " << this->_attackdamage << " points of damage!" << std::endl;
 		(this->_energypoint)--;
 		return ;
 	}

@@ -6,13 +6,12 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 11:35:45 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 19:11:29 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-//CHANGER TOUS LES HEADER POUR RETIRER .class.
 //-Wshadow : Vérifie que _name de DiamondTrap ne cache pas son _name ClapTrap
 int	main(void)
 {
@@ -26,7 +25,7 @@ int	main(void)
 	DiamondGus.attack("Franck");
 	DiamondGus.beRepaired(2);
 	DiamondGus.takeDamage(3);
-	//tester l'operareut =
+	//tester l'operateur =
 	
 	DiamondGus.whoAmI();
 	return (0);
