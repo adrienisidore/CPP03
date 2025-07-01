@@ -6,12 +6,14 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:49:19 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 13:49:23 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 17:43:07 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
+//Appel de ClapTrap directement depuis Frag ou Scav:
+//FragTrap("Default_clap_name"), ScavTrap(), _name("Default")
 DiamondTrap::DiamondTrap(void)
     : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default")
 {
@@ -53,22 +55,21 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)
 		std::cout << "DiamondTrap assignment operator called" << std::endl;
 		ClapTrap::operator=(rhs);
         this->_name = rhs._name;
-		//Recuperer le name de CLapTrap ?????
-		//copier coller hitpoint, attackdamage, ....
+		this->_hitpoint = rhs._hitpoint;
+		this->_energypoint = rhs._energypoint;
+		this->_attackdamage = rhs._attackdamage;
 	}
 	else
 		std::cout << "Assignment operator called for the same instance" << std::endl;
 	return (*this);
 }
 
-//const ??????
 void DiamondTrap::whoAmI(void)
 {
 	std::cout << "I am " << this->_name << ", and my ClapTrap name is "
     << ClapTrap::_name << std::endl;
 }
 
-// Redéfinition explicite de attack() pour appeler celle de ScavTrap
 void DiamondTrap::attack(const std::string& target)
 {
 	ScavTrap::attack(target);

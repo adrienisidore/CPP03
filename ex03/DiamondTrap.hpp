@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 11:25:04 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 11:36:06 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/01 17:43:36 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap(const DiamondTrap &copy);
 		DiamondTrap &operator=(const DiamondTrap &rhs);
 		~DiamondTrap(void);
-		void whoAmI(void);//const ?????
-		void attack(const std::string& target); //Celui de ScavTrap
+		void whoAmI(void);
+		void attack(const std::string& target);//ScavTrap
 
 		//tester avec virtual attack
 };
