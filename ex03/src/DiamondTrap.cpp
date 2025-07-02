@@ -6,21 +6,24 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:49:19 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 19:12:22 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 16:23:30 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "../DiamondTrap.hpp"
 
 //Appel de ClapTrap directement depuis Frag ou Scav:
 //FragTrap("Default_clap_name"), ScavTrap(), _name("Default")
 DiamondTrap::DiamondTrap(void)
     : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default")
 {
+	//attributs ont repris la valeur ScavTrap
 	std::cout << "DiamondTrap default constructor called for " << this->_name << std::endl;
 	this->_hitpoint = FragTrap::_hitpoint;
 	this->_energypoint = ScavTrap::_energypoint;
 	this->_attackdamage = FragTrap::_attackdamage;
+	std::cout << "frag attack !!!!!!!!!!!!!!!!!!!!!!!!!!! : " << FragTrap::_attackdamage << std::endl;//////////////////////////////////////////
+	////Trouver solution pour name aussi
 }
 
 DiamondTrap::DiamondTrap(std::string name)
@@ -35,17 +38,19 @@ DiamondTrap::DiamondTrap(std::string name)
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 	: ClapTrap(copy), FragTrap(copy), ScavTrap(copy), _name(copy._name)
 {
-	this->_hitpoint = FragTrap::_hitpoint;
-	this->_energypoint = ScavTrap::_energypoint;
-	this->_attackdamage = FragTrap::_attackdamage;
+	// this->_hitpoint = FragTrap::_hitpoint;
+	// this->_energypoint = ScavTrap::_energypoint;
+	// this->_attackdamage = FragTrap::_attackdamage;
 	std::cout << "ScavTrap copy constructor called for hitpoint = "
-	<< this->_hitpoint << " energypoint = "<< this->_energypoint << " attackdamage = "
+	<< this->_hitpoint << " energypoint = "
+	<< this->_energypoint << " attackdamage = "
 	<< this->_attackdamage << std::endl; 
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap destructor called for " << this->_name << std::endl;
+	std::cout << "DiamondTrap destructor called for "
+	<< this->_name << std::endl;
 }
 
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)

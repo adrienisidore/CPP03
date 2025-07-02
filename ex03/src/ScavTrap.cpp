@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.class.cpp                                 :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:27:37 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:25:55 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "../ScavTrap.hpp"
 
 //Appel au constructeur parent
 ScavTrap::ScavTrap(void) : ClapTrap()
@@ -34,13 +34,15 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
 	std::cout << "ScavTrap copy constructor called for hitpoint = "
-	<< this->_hitpoint << " energypoint = "<< this->_energypoint << " attackdamage = "
-	<< this->_attackdamage << std::endl; 
+	<< this->_hitpoint << " energypoint = "
+	<< this->_energypoint << " attackdamage = "
+	<< this->_attackdamage << std::endl;  
 }
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap default destructor called for " << this->_name << std::endl;
+	std::cout << "ScavTrap default destructor called for "
+	<< this->_name << std::endl;
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &rhs)
@@ -60,15 +62,18 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (this->_energypoint && this->_hitpoint)
 	{
-		std::cout << "ScavTrap " << this->_name << " attacks " << target
-		<< ", causing " << this->_attackdamage << " points of damage!" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " attacks "
+		<< target << ", causing " << this->_attackdamage
+		<< " points of damage!" << std::endl;
 		(this->_energypoint)--;
 		return ;
 	}
-	std::cout << this->_name << " has no energy/hit point to attack" << std::endl;
+	std::cout << this->_name << " has no energy/hit point to attack"
+	<< std::endl;
 }
 
-void 	ScavTrap::guardGate(void) const
+void 	ScavTrap::guardGate(void)
 {
-	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->_name
+	<< " is now in Gate keeper mode" << std::endl;
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.class.cpp                                 :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:27:51 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:25:48 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "../FragTrap.hpp"
 
 FragTrap::FragTrap(void) : ClapTrap()
 {
@@ -21,8 +21,8 @@ FragTrap::FragTrap(std::string	name) : ClapTrap(name)
 {
 	std::cout << "FragTrap constructor called for " << this->_name << std::endl;
 	this->_hitpoint = 100;
-	this->_energypoint = 50;
-	this->_attackdamage = 20;
+	this->_energypoint = 100;
+	this->_attackdamage = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
@@ -34,7 +34,8 @@ FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FragTrap default destructor called for " << this->_name << std::endl;
+	std::cout << "FragTrap default destructor called for "
+	<< this->_name << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &rhs)

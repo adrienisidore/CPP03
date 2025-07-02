@@ -6,15 +6,16 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 11:25:04 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/01 17:43:36 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:15:00 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
+# include "./FragTrap.hpp"
+# include "./ScavTrap.hpp"
+# include <iostream>
 
 class DiamondTrap : public FragTrap, public ScavTrap
 {
