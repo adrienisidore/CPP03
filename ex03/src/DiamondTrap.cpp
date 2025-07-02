@@ -6,33 +6,34 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:49:19 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 16:23:30 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 18:24:42 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../DiamondTrap.hpp"
 
 //Appel de ClapTrap directement depuis Frag ou Scav:
-//FragTrap("Default_clap_name"), ScavTrap(), _name("Default")
+//FragTrap("Default_clap_name"), ScavTrap(), _name("Default") Possible ??
+
+// La classe la plus dérivée (ici Diamond) est responsable de construire Clap
+//Frag et Scav ne construisent pas un nouveau Clap, mais executent quand
+//meme ce qu'ils ont entre {} (affectations ...) pour l'instance partagee Clap.
 DiamondTrap::DiamondTrap(void)
     : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default")
 {
-	//attributs ont repris la valeur ScavTrap
 	std::cout << "DiamondTrap default constructor called for " << this->_name << std::endl;
-	this->_hitpoint = FragTrap::_hitpoint;
-	this->_energypoint = ScavTrap::_energypoint;
-	this->_attackdamage = FragTrap::_attackdamage;
-	std::cout << "frag attack !!!!!!!!!!!!!!!!!!!!!!!!!!! : " << FragTrap::_attackdamage << std::endl;//////////////////////////////////////////
-	////Trouver solution pour name aussi
+	this->_hitpoint = FragTrap::defaultHitPoints;
+	this->_energypoint = ScavTrap::defaultEnergyPoints;
+	this->_attackdamage = FragTrap::defaultAttackDamage;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
 {
 	std::cout << "DiamondTrap constructor called for " << this->_name << std::endl;
-	this->_hitpoint = FragTrap::_hitpoint;
-	this->_energypoint = ScavTrap::_energypoint;
-	this->_attackdamage = FragTrap::_attackdamage;
+	this->_hitpoint = FragTrap::defaultHitPoints;
+	this->_energypoint = ScavTrap::defaultEnergyPoints;
+	this->_attackdamage = FragTrap::defaultAttackDamage;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)

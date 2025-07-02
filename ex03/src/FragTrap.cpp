@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 15:25:48 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:48:32 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
+	this->_hitpoint = 100;
+	this->_energypoint = 100;
+	this->_attackdamage = 30;
 }
 
 FragTrap::FragTrap(std::string	name) : ClapTrap(name)

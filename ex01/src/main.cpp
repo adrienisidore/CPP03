@@ -6,11 +6,11 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:25:21 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:25:11 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "../ScavTrap.hpp"
 
 int	main(void)
 {

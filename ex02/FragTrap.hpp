@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.class.hpp                                 :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 19:59:17 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:15:16 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-# include "ClapTrap.hpp"
+# include "./ClapTrap.hpp"
+# include <iostream>
 
 class FragTrap : public ClapTrap
 {

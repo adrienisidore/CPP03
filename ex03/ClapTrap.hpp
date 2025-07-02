@@ -6,16 +6,12 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 16:09:44 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 18:22:38 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
-
-
-//ATTENTION CHAQUE POINT H DOIT ETRE INDEPENDANT
-
 
 # include <iostream>
 

@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 15:15:03 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:52:00 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@
 
 class FragTrap : virtual public ClapTrap
 {
+	protected:
+		static const int defaultHitPoints = 100;
+		static const int defaultEnergyPoints = 100;
+		static const int defaultAttackDamage = 30;
 	public:
 		FragTrap();
 		FragTrap(std::string name);

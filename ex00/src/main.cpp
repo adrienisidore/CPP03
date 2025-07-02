@@ -6,11 +6,11 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 13:24:16 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 15:25:00 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "../ClapTrap.hpp"
 
 int	main(void)
 {
