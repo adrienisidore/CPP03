@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:15:10 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:24:16 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ int	main(void)
 	Gugus.attack("Franck");
 	Gugus.attack("Franck");
 	Gugus.attack("Franck");//
+	Gugus.beRepaired(2);
 	return (0);
 }

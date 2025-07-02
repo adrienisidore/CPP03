@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.class.hpp                                 :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
-/*   Updated: 2025/06/10 20:13:20 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/02 12:54:27 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ClapTrap
 		std::string	_name;
 		int			_hitpoint;
 		int			_energypoint;
-		int			_attackdamage;
+		int			_attackdamage;//const
 	public:
 		ClapTrap(void);//Constructeur par defaut
 		ClapTrap(const std::string name);
