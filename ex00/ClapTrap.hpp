@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:33:31 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 12:54:27 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:21:21 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ class ClapTrap
 		std::string	_name;
 		int			_hitpoint;
 		int			_energypoint;
-		int			_attackdamage;//const
+		int			_attackdamage;
 	public:
-		ClapTrap(void);//Constructeur par defaut
+		ClapTrap(void);
 		ClapTrap(const std::string name);
-		ClapTrap(const ClapTrap &copy);//Constructeur par copie
+		ClapTrap(const ClapTrap &copy);
 		ClapTrap	&operator=(const ClapTrap &rhs);
-		~ClapTrap(void);//Destructeur par defaut
+		~ClapTrap(void);
 		std::string getname(void) const;	
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);

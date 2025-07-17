@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:55:22 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 15:15:16 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:34:07 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class FragTrap : public ClapTrap
 		FragTrap(const FragTrap &copy);
 		FragTrap	&operator=(const FragTrap &rhs);
 		~FragTrap(void);
-		void attack(const std::string& target);
+		// void attack(const std::string& target);
 		void highFivesGuys(void);
 };
 

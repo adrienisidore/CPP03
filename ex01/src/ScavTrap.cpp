@@ -6,13 +6,12 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 15:25:18 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:24:26 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ScavTrap.hpp"
 
-//Appel au constructeur parent
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	std::cout << "ScavTrap default constructor called for " << this->_name << std::endl;
@@ -24,7 +23,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap constructor called for " << this->_name << std::endl;
-	//Modification des éléments "CLapTrap" de ScavTrap
+	//Modification des éléments "ClapTrap" de ScavTrap
 	this->_hitpoint = 100;
 	this->_energypoint = 50;
 	this->_attackdamage = 20;
