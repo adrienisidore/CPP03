@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 15:56:16 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 17:48:32 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 10:55:36 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap(void) : ClapTrap()
 {
-	std::cout << "FragTrap default constructor called" << std::endl;
+	std::cout << "FragTrap default constructor called for " << this->_name << std::endl;
 	this->_hitpoint = 100;
 	this->_energypoint = 100;
 	this->_attackdamage = 30;
@@ -53,17 +53,17 @@ FragTrap	&FragTrap::operator=(const FragTrap &rhs)
 	return (*this);
 }
 
-void FragTrap::attack(const std::string& target)
-{
-	if (this->_energypoint && this->_hitpoint)
-	{
-		std::cout << "FragTrap " << this->_name << " attacks " << target
-		<< ", causing " << this->_attackdamage << " points of damage!" << std::endl;
-		(this->_energypoint)--;
-		return ;
-	}
-	std::cout << this->_name << " has no energy/hit point to attack" << std::endl;
-}
+// void FragTrap::attack(const std::string& target)
+// {
+// 	if (this->_energypoint && this->_hitpoint)
+// 	{
+// 		std::cout << "FragTrap " << this->_name << " attacks " << target
+// 		<< ", causing " << this->_attackdamage << " points of damage!" << std::endl;
+// 		(this->_energypoint)--;
+// 		return ;
+// 	}
+// 	std::cout << this->_name << " has no energy/hit point to attack" << std::endl;
+// }
 
 void FragTrap::highFivesGuys(void)
 {

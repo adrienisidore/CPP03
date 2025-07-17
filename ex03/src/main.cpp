@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 18:24:15 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 11:56:20 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,18 @@
 //-Wshadow : Vérifie que _name de DiamondTrap ne cache pas son _name ClapTrap
 int	main(void)
 {
-	ClapTrap	Gugus("Gugus");
-	ScavTrap	ScavGus("ScavGus");
-	FragTrap	FragGus("FragGus");
 	DiamondTrap	DiamondGus("DiamondGus");
-
+	std::cout << "--------------- TEST FUNCTION ---------------" << std::endl << std::endl;
 	DiamondGus.guardGate();
 	DiamondGus.highFivesGuys();
 	DiamondGus.attack("Franck");
 	DiamondGus.beRepaired(2);
 	DiamondGus.takeDamage(3);
 	DiamondGus.whoAmI();
-	
-	DiamondTrap	Diamondtest;
-
-	Diamondtest = DiamondGus;
-	std::cout << Diamondtest.get_attackdam() << std::endl;
-	std::cout << DiamondGus.get_attackdam() << std::endl;
-	
+	std::cout << "---------------                ---------------" << std::endl << std::endl;
+	DiamondTrap		copy(DiamondGus);
+	DiamondTrap	copy2;
+	copy2 = DiamondGus;
+	std::cout << "---------------                ---------------" << std::endl << std::endl;
 	return (0);
 }

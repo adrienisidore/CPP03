@@ -6,20 +6,23 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/01 13:49:19 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 18:24:42 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/17 11:48:20 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../DiamondTrap.hpp"
 
-//Appel de ClapTrap directement depuis Frag ou Scav:
-//FragTrap("Default_clap_name"), ScavTrap(), _name("Default") Possible ??
-
-// La classe la plus dérivée (ici Diamond) est responsable de construire Clap
+// La classe la plus dérivée (ici Diamond) est responsable de construire Clap.
 //Frag et Scav ne construisent pas un nouveau Clap, mais executent quand
 //meme ce qu'ils ont entre {} (affectations ...) pour l'instance partagee Clap.
+// DiamondTrap::DiamondTrap(void)
+//     : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default")
+
+//Frag et Scav font appel a au Clap construit par Diamond.
+//Si non specifies, les constructeurs par defaut Frag et Scav sont appeles.
+
 DiamondTrap::DiamondTrap(void)
-    : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default")
+    : ClapTrap("Default_clap_name"), _name("Default")
 {
 	std::cout << "DiamondTrap default constructor called for " << this->_name << std::endl;
 	this->_hitpoint = FragTrap::defaultHitPoints;
@@ -28,7 +31,7 @@ DiamondTrap::DiamondTrap(void)
 }
 
 DiamondTrap::DiamondTrap(std::string name)
-	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
+	: ClapTrap(name + "_clap_name"), _name(name)
 {
 	std::cout << "DiamondTrap constructor called for " << this->_name << std::endl;
 	this->_hitpoint = FragTrap::defaultHitPoints;
@@ -36,12 +39,10 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_attackdamage = FragTrap::defaultAttackDamage;
 }
 
+//Appel aux constructeurs des 3 parents pour eviter d'ecraser les de copy
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 	: ClapTrap(copy), FragTrap(copy), ScavTrap(copy), _name(copy._name)
 {
-	// this->_hitpoint = FragTrap::_hitpoint;
-	// this->_energypoint = ScavTrap::_energypoint;
-	// this->_attackdamage = FragTrap::_attackdamage;
 	std::cout << "ScavTrap copy constructor called for hitpoint = "
 	<< this->_hitpoint << " energypoint = "
 	<< this->_energypoint << " attackdamage = "
