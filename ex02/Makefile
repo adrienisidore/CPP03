@@ -6,7 +6,7 @@
 #    By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/03 14:09:31 by aisidore          #+#    #+#              #
-#    Updated: 2025/06/10 17:44:59 by aisidore         ###   ########.fr        #
+#    Updated: 2025/07/18 15:46:34 by aisidore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME = fragtrap
 
 FLAGS = -Wall -Wextra -Werror -I. -std=c++98
 
-SRC = src/main.cpp src/ClapTrap.cpp src/FragTrap.cpp
+SRC = src/main.cpp src/ClapTrap.cpp src/FragTrap.cpp src/ScavTrap.cpp
 
-OBJ = objets/main.o objets/ClapTrap.o objets/FragTrap.o
+OBJ = objets/main.o objets/ClapTrap.o objets/FragTrap.o objets/ScavTrap.o
 
 all: $(NAME)
 
