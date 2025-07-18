@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:32:52 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/02 16:11:16 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/18 16:00:06 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,12 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout << this->_name
 	<< " has no more energy/hit point to be repaired" << std::endl;
 }
-int	ClapTrap::get_attackdam(void) const
-{
-	return (this->_attackdamage);
-}
+// void	ClapTrap::get_all(void) const
+// {
+// 	std::cout << "attackdamage:" << std::endl;
+// 	std::cout << this->_attackdamage << std::endl;
+// 	std::cout << "energypoint:" << std::endl;
+// 	std::cout << this->_energypoint << std::endl;
+// 	std::cout << "hitpoint:" << std::endl;
+// 	std::cout << this->_hitpoint << std::endl;
+// }

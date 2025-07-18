@@ -6,7 +6,7 @@
 /*   By: aisidore <aisidore@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 13:39:45 by aisidore          #+#    #+#             */
-/*   Updated: 2025/07/17 11:56:20 by aisidore         ###   ########.fr       */
+/*   Updated: 2025/07/18 16:00:48 by aisidore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	DiamondGus.takeDamage(3);
 	DiamondGus.whoAmI();
 	std::cout << "---------------                ---------------" << std::endl << std::endl;
-	DiamondTrap		copy(DiamondGus);
+	DiamondTrap	copy(DiamondGus);
 	DiamondTrap	copy2;
 	copy2 = DiamondGus;
 	std::cout << "---------------                ---------------" << std::endl << std::endl;
